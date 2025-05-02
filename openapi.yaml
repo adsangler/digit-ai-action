@@ -1,42 +1,44 @@
-openapi: 3.1.0
+openapi: 3.0.0
 info:
-  title: Digit-Ai Zapier Integration
+  title: Digit-Ai Zapier Proxy
   version: 1.0.0
-  description: Sends lead capture data to Zapier when users complete the survey.
+  description: Forwards lead data to Zapier via a Vercel proxy
 servers:
-  - url: https://github.io/  # Placeholder URL for compatibility
+  - url: https://v0-proxyapi-dxfd2jbs8-adsangler1.vercel.app/api
 paths:
-  /hooks/catch/22756592/2ppwfus/:
+  /send-lead:
     post:
       summary: Send lead capture data to Zapier
       operationId: sendLeadData
-      servers:
-        - url: https://hooks.zapier.com
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                full_name:
-                  type: string
-                company_name:
-                  type: string
-                score:
-                  type: integer
-                max_score:
-                  type: integer
-                version:
-                  type: string
-                timestamp:
-                  type: string
-              required:
-                - email
-                - full_name
-                - company_name
+              $ref: '#/components/schemas/Lead'
       responses:
         '200':
-          description: Success
+          description: Successfully forwarded to Zapier
+components:
+  schemas:
+    Lead:
+      type: object
+      properties:
+        email:
+          type: string
+        full_name:
+          type: string
+        company_name:
+          type: string
+        score:
+          type: integer
+        max_score:
+          type: integer
+        version:
+          type: string
+        timestamp:
+          type: string
+      required:
+        - email
+        - full_name
+        - company_name
