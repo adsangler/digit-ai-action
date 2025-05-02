@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Digit-Ai Webhook",
+  "name_for_model": "digit_ai_webhook",
+  "description_for_human": "Send Digit-Ai lead capture results to Zapier.",
+  "description_for_model": "Use this to send lead capture data to Zapier when a user completes the survey.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://adsangler.github.io/digit-ai-action/openapi.yaml"
+  },
+  "logo_url": "https://static.wixstatic.com/media/8c2b30_9765c262…o/8c2b30_9765c2622e4c48108da2047134ffdc43~mv2.png",
+  "contact_email": "shayz@adsangler.com",
+  "legal_info_url": "https://adsangler.com/privacy-policy"
+}
