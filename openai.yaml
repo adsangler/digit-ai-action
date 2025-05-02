@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Sends lead capture data to Zapier when users complete the survey.
 servers:
-  - url: https://github.io  # Placeholder URL for compatibility
+  - url: https://adsangler.github.io/  # Placeholder URL for compatibility
 paths:
   /hooks/catch/22756592/2ppwfus/:
     post:
