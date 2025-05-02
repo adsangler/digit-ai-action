@@ -1,0 +1,40 @@
+openapi: 3.0.0
+info:
+  title: Digit-Ai Zapier Integration
+  version: 1.0.0
+  description: Sends lead capture data to Zapier when users complete the survey.
+servers:
+  - url: https://hooks.zapier.com
+paths:
+  /hooks/catch/22756592/2ppwfus/:
+    post:
+      summary: Send lead capture data to Zapier
+      operationId: sendLeadData
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                full_name:
+                  type: string
+                company_name:
+                  type: string
+                score:
+                  type: integer
+                max_score:
+                  type: integer
+                version:
+                  type: string
+                timestamp:
+                  type: string
+              required:
+                - email
+                - full_name
+                - company_name
+      responses:
+        '200':
+          description: Success
