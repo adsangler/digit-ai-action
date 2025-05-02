@@ -1,0 +1,17 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Digit-Ai Webhook",
+  "name_for_model": "digit_ai_webhook",
+  "description_for_human": "Send Digit-Ai leads to Zapier securely.",
+  "description_for_model": "Use this to send lead capture data to Zapier.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "https://yourdomain.com/digit-ai/openapi.yaml"
+  },
+  "logo_url": "https://yourdomain.com/logo.png",
+  "contact_email": "your@email.com",
+  "legal_info_url": "https://yourdomain.com/privacy"
+}
