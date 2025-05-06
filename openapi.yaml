@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Forwards lead data to Zapier via a Vercel proxy
 servers:
-  - url: https://v0-proxyapi-dxfd2jbs8-adsangler1.vercel.app/api
+  - url: https://vercel.com/adsangler1/api
 paths:
   /send-lead:
     post:
